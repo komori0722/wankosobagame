@@ -9,7 +9,7 @@ void main() {
 
     System.out.println("わんこそばチャレンジぃぃぃ！");
     System.out.println("【Enter】" + "を押してドンドン食べよう！\n何杯までいけるかな？");
-    while (isFull == false){
+    while (!isFull){
         scanner.nextLine();
 
         int dice = (int)(Math.random()*50)+1;
@@ -25,7 +25,7 @@ void main() {
             if(HP <= 0){
                System.out.println("舌が痛くてもう食べられない...\n連続記録"+kaisuu+"杯\n激辛記録"+gekikara+"杯");
                isFull = true;
-            } else if (HP > 0){
+            } else {
                 System.out.println("残りHP"+HP);
             }
         } else {
